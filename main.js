@@ -5,19 +5,37 @@ import { createProdutos } from "./scripts/createProdutos.js";
 // Setores
 const divResultados = document.getElementById('div-resultados');
 const divCarrinho = document.getElementById('div-carrinho');
+const btnSearch = document.getElementById('btn-search');
+const querySearch = document.getElementById('query-search');
 
 
 // Variaveis globais
+let valorCarrinho = 0;
 
 
 
 
 // Funções
-// Criar uma função para criar os primeiros elementos na tela.
+function handleClickSearch() {
+    const queryValue = querySearch.value;
+
+    const buscaDeProdutos = produtos.filter((e, i) => e.nome.includes(queryValue));
+    createProdutos(buscaDeProdutos, divResultados);
+};
 
 
 
 // Eventos
 window.addEventListener('load', () => {
     createProdutos(produtos, divResultados);
+    const addCars = document.querySelectorAll('.add-car');
+
+    addCars.forEach((e, i) => {
+        e.addEventListener('click', () => {
+            alert(i);
+        });
+    });
+
 });
+
+btnSearch.addEventListener('click', handleClickSearch);
