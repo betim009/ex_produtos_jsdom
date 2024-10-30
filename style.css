@@ -1,3 +1,7 @@
 .img-thumb {
     height: 80px;
 }
+
+.flex {
+    display: flex;
+}

@@ -8,12 +8,8 @@ const divCarrinho = document.getElementById('div-carrinho');
 const btnSearch = document.getElementById('btn-search');
 const querySearch = document.getElementById('query-search');
 
-
 // Variaveis globais
 let valorCarrinho = 0;
-
-
-
 
 // Funções
 function handleClickSearch() {
@@ -23,16 +19,18 @@ function handleClickSearch() {
     createProdutos(buscaDeProdutos, divResultados);
 };
 
-
-
 // Eventos
 window.addEventListener('load', () => {
     createProdutos(produtos, divResultados);
-    const addCars = document.querySelectorAll('.add-car');
+    const btnsAddCars = document.querySelectorAll('.btns-add-car');
 
-    addCars.forEach((e, i) => {
+    btnsAddCars.forEach((e, i) => {
         e.addEventListener('click', () => {
-            alert(i);
+            divCarrinho.innerHTML += `
+                <div>
+                    <p>${produtos[i].nome}</p>
+                </div>
+            `
         });
     });
 

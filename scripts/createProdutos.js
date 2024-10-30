@@ -8,7 +8,7 @@ export function createProdutos(listaDeProdutos, div) {
                 <img class="img-thumb" src="${e.thumb}" alt="" />
                 <h2>${e.nome}</h2>
                 <p>${e.preco}</p>
-                <button class="add-car">Add Carrinho</button>
+                <button class="btns-add-car">Add Carrinho</button>
                 <button class="">Finalizar</button>
             </div> 
         `
