@@ -9,7 +9,7 @@ export function createProdutos(listaDeProdutos, div) {
                 <h2>${e.nome}</h2>
                 <p>${e.preco}</p>
                 <button class="btns-add-car">Add Carrinho</button>
-                <button class="">Finalizar</button>
+                <button class="btns-finalizar">Finalizar</button>
             </div> 
         `
     ));
